@@ -6,6 +6,8 @@
 using namespace std;
 //C++中通过std::mutex创建互斥量 通过调用成员函数lock()和unlock()进行锁的操作，这意味着在每一个函数出口都需要手动unlock
 //标准库为互斥量提供了一个RAII的模板类std::lock_guard
+//编译时候请注意：g++ use_lock_guard.cpp -o output -pthread
+// ./output
 int cnt=0;
 mutex cnt_lock;
 void func_mutex(){
